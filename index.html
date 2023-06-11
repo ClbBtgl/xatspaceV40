@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Xatspace Lala V.0</title>
+
+
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <link rel="icon" type="image/png" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+
+        <title>spacebylala</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Vidaloka:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+        <style>
+            /*-- Cambia los colore aca!!! --*/
+            
+             :root {
+                --background: #0a0a0a;
+                --background-pattern: #181818;
+                --containerbg: #070707;
+                --posts: #181818;
+                --border: #313131;
+                --text: #a6a6a6;
+                --bold: #9a8c98;
+                --accent: #1628ff;
+                --body-font: 'Be Vietnam Pro', sans-serif;
+                --accent-font: 'Vidaloka';
+                --font-size: 11px;
+                --profile-filter: 0%;
+                --Music-Controls-Color: #bdbce7;
+                --Music-Controls-Size: 16px;
+                --Music-Controls-Spacing: 13px;
+                --Play-Button-Padding: 9px;
+                /*CHANGE TO 0% FOR COLORFUL PICTURES*/
+                --dark-mode: 0;
+                /*CHANGE TO 1 FOR DARK TUMBLR TOOLS*/
+                --animation: 1;
+                /*CHANGE TO 0 TO TURN OFF THE LOADING ANIMATION*/
+                --container-width: 950px;
+                /*IF YOU MAKE IT SMALLER THAN 550px IT LOOKS FUNNY AND NEEDS A LOT OF EDITING*/
+                --container-height: 560px;
+            }
+            /** body **/
+            
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent) var(--background);
+            }
+            
+             ::-webkit-scrollbar {
+                width: 3px;
+                height: 4px;
+                background: var(--background);
+            }
+            
+             ::-webkit-scrollbar-button {
+                width: 0px;
+                height: 0px;
+            }
+            
+             ::-webkit-scrollbar-thumb {
+                background: var(--accent);
+                border-radius: 0px;
+            }
+            
+            body {
+                margin: 0;
+                background-color: var(--background);
+                font-family: var(--body-font);
+                padding: 0;
+                text-align: justify;
+                color: var(--text);
+                font-size: var(--font-size);
+                overflow: auto;
+                background-size: 50px 50px;
+                background-image: linear-gradient(to right, var(--background-pattern) 1px, transparent 1px), linear-gradient(to bottom, var(--background-pattern) 1px, transparent 1px);
+            }
+            
+            a {
+                text-decoration: none;
+                color: var(--bold);
+            }
+            
+            b,
+            strong {
+                color: var(--bold);
+                font-weight: 800;
+                font-size: calc(var(--font-size) + 4px);
+                font-family: var(--accent-font);
+            }
+            
+            i,
+            italic {
+                color: var(--bold);
+                font-weight: italic;
+            }
+            
+            h1 {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 20px;
+                color: var(--accent);
+                margin-bottom: 5px;
+                margin-top: 5px;
+                font-family: var(--accent-font);
+                letter-spacing: 1px;
+                border-bottom: 1px solid var(--accent);
+            }
+            
+            h2 {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 20px;
+                color: var(--accent);
+                margin-bottom: 5px;
+                margin-top: 5px;
+                font-family: var(--accent-font);
+                letter-spacing: 1px;
+                text-align: right;
+                border-bottom: 1px solid var(--accent);
+            }
+            /** TOPBAR **/
+            
+            iframe.tmblr-iframe {
+                position: fixed;
+                z-index: 14!important;
+                top: 5px!important;
+                right: 10px!important;
+                opacity: 0.5;
+                padding-right: 0px;
+                transform: scale(0.6);
+                transform-origin: 100% 0;
+                -webkit-transform: scale(0.6);
+                -webkit-transform-origin: 100% 0;
+                -o-transform: scale(0.6);
+                -o-transform-origin: 100% 0;
+                -moz-transform: scale(0.6);
+                -moz-transform-origin: 100% 0;
+                -ms-transform: scale(0.6);
+                -ms-transform-origin: 100% 0;
+                transition: .2s ease-in-out;
+                -webkit-transition: .2s ease-in-out;
+                -moz-transition: .2s ease-in-out;
+                filter: invert(var(--dark-mode));
+                -webkit-filter: invert(var(--dark-mode));
+                -o-filter: invert(var(--dark-mode));
+                -moz-filter: invert(var(--dark-mode));
+                -ms-filter: invert(var(--dark-mode));
+            }
+            
+            #topbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 45px;
+                border-bottom: 1px solid var(--border);
+                background: var(--containerbg);
+            }
+            
+            .navigation {
+                width: 100%;
+                left: 0;
+                margin-top: 15px;
+                text-align: center;
+            }
+            
+            .navigation a {
+                color: var(--text);
+                font-weight: 500;
+                padding: 10px;
+                margin-right: 20px;
+                transition: background-color 300ms ease-in;
+            }
+            
+            .navigation a:hover {
+                background: rgba(215, 208, 204, 0.22);
+                border: 1px solid rgba(215, 208, 204, 0.42);
+            }
+            
+            .navigation span {
+                font-size: 15px;
+                padding-right: 3px;
+            }
+            /** NAVIGATION SLIDES **/
+            
+            .sidebar {
+                height: 110px;
+                position: absolute;
+                margin-top: calc(var(--container-height) + 10px);
+                margin-left: -20px;
+                width: calc(var(--container-width) + 20px);
+                padding: 10px;
+                overflow: hidden;
+                animation: nav 1s ease 0s var(--animation) normal none;
+            }
+            
+            @keyframes nav {
+                0% {
+                    opacity: 0;
+                    transform: translateY(250px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .carousel__nav {
+                overflow-x: scroll;
+                overflow-y: hidden;
+                display: flex;
+                height: 95%;
+                width: 100%;
+            }
+            
+            .minimuse {
+                min-width: 150px;
+                height: 100px;
+                margin-left: 0px;
+                margin-top: 0px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            
+            .minimuse img {
+                border: 0px solid var(--border);
+                width: 150px;
+                height: 90px;
+                filter: grayscale(100%);
+            }
+            
+            .minimuse img:hover {
+                filter: grayscale(0%);
+            }
+            
+            .textcon {
+                position: relative;
+            }
+            
+            .text {
+                position: absolute;
+                z-index: 100;
+                color: var(--text);
+                font-size: 12px;
+                font-weight: bold;
+                text-align: center;
+                left: 0px;
+                text-transform: uppercase;
+                padding-top: 5px;
+                top: 68px;
+                background: rgba(238, 238, 238, 0.4);
+                backdrop-filter: blur(5px);
+                width: 151px;
+                height: 18px;
+            }
+            /** MUSE PAGES **/
+            
+            .container {
+                width: var(--container-width);
+                height: var(--container-height);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background: var(--containerbg);
+                overflow: visible;
+                border: 1px solid var(--border);
+                padding: 10px;
+            }
+            
+            .slides {
+                display: flex;
+                overflow: hidden;
+                scrollbar-width: none;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                margin-top: -30px;
+            }
+            
+            .slides::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .slides-item {
+                align-items: left;
+                display: flex;
+                flex-shrink: 0;
+                height: var(--container-height);
+                margin: 0 1rem;
+                position: relative;
+                scroll-snap-align: start;
+                transform: scale(1);
+                transform-origin: center center;
+                transition: transform .5s;
+                width: 100%;
+                margin-top: 30px;
+                background: var(--containerbg);
+            }
+            
+            .slides-item img {
+                width: calc(var(--container-width) - 58%);
+                height: calc(var(--container-height) - 10px);
+                margin-left: 0px;
+                position: absolute;
+                margin-top: 5px;
+                filter: grayscale(var(--profile-filter));
+            }
+            
+            .info {
+                position: absolute;
+                margin-left: 75px;
+                margin-top: calc(var(--container-height) - 235px);
+                border: 1px solid rgba(215, 208, 204, 0.42);
+                padding: 20px;
+                width: calc(var(--container-width) - 69.5%);
+                height: 110px;
+                z-index: 10;
+                background: rgba(215, 208, 204, 0.22);
+                backdrop-filter: blur(5px);
+                overflow: hidden;
+                animation: myAnim 7s ease 0s infinite alternate-reverse forwards;
+            }
+            
+            @keyframes myAnim {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-80px);
+                }
+            }
+            
+            .details {
+                position: absolute;
+                margin-left: calc(var(--container-width) - 58%);
+                margin-top: 5px;
+                width: calc(var(--container-width) - 42%);
+                height: calc(var(--container-height) - 5px);
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+            
+            .intro {
+                overflow-x: hidden;
+                overflow-y: auto;
+                height: 295px;
+                width: calc(var(--container-width) - 115%);
+                margin-top: 0px;
+                margin-left: 0px;
+                position: absolute;
+                padding-right: 4px;
+            }
+            
+            table.intro {
+                width: 95%;
+                margin-left: 8px;
+            }
+            
+            table.intro td,
+            table.intro th {
+                padding: 9px 12px;
+                font-size: calc(var(--font-size) + 1px);
+                border: 3px solid var(--containerbg);
+                text-align: left;
+                color: var(--text);
+                font-weight: bold;
+                text-transform: lowercase;
+                background: var(--accent);
+            }
+            
+            table.intro td:nth-child(even) {
+                background: var(--posts);
+                font-weight: normal;
+                text-align: right;
+                color: var(--text);
+            }
+            
+            .skills {
+                position: absolute;
+                width: calc(var(--container-width) - 140%);
+                height: 276px;
+                padding: 4px;
+                margin-left: calc(var(--container-width) - 112%);
+                margin-top: 2px;
+                text-align: left;
+                background: var(--containerbg);
+                overflow: hidden;
+            }
+            
+            .progress {
+                width: 100%;
+                height: 10px;
+                background-color: var(--text);
+                text-align: center;
+                line-height: 11px;
+                overflow: hidden;
+                margin-bottom: 21px;
+            }
+            
+            .skills h6 {
+                margin: 10px 0 0px 5px;
+                padding: 0;
+                font-size: var(--font-size);
+                font-weight: 700;
+                text-transform: uppercase;
+                color: var(--text);
+                font-family: var(--body-font);
+                letter-spacing: 1px;
+                text-align: left;
+            }
+            
+            .progress .percent {
+                text-align: right;
+                padding-right: 10px;
+                background-color: var(--accent);
+                color: var(--accent);
+            }
+            
+            .biography {
+                position: absolute;
+                width: calc(var(--container-width) - 83.5%);
+                height: 210px;
+                background: var(--posts);
+                padding: 20px;
+                margin-left: 10px;
+                margin-top: 300px;
+                overflow: auto;
+                border: 1px solid var(--border);
+            }
+            
+            .bubbles {
+                z-index: 99999;
+                margin-top: -30px;
+                margin-left: 0px;
+                position: absolute;
+            }
+            
+            .bubbles a {
+                margin-left: 5px;
+                display: inline-block;
+                width: 45px;
+                background: var(--posts);
+                border: 1px solid var(--border);
+                border-radius: 50%;
+                text-align: center;
+                transition: background-color 300ms ease-in;
+            }
+            
+            .bubbles span {
+                color: var(--text);
+                text-align: center;
+                line-height: 45px;
+                font-size: 20px;
+            }
+            
+            .bubbles a:hover {
+                background: rgba(215, 208, 204, 0.22);
+                border: 1px solid rgba(215, 208, 204, 0.42);
+            }
+            /*player*/
+            
+            .flex {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-evenly;
+            }
+            
+            .prev,
+            .next {
+                margin: 0 calc(var(--Music-Controls-Spacing) / 2);
+                padding: calc(var(--Music-Controls-Spacing) / 2);
+            }
+            
+            .playbutt {
+                position: relative;
+            }
+            
+            .fen {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: calc((var(--Music-Controls-Size) - 4px) + (var(--Play-Button-Padding) * 2));
+                height: calc((var(--Music-Controls-Size) - 4px) + (var(--Play-Button-Padding) * 2));
+            }
+            
+            .playbutt:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                margin-top: -1px;
+                left: 0;
+                margin-left: -1px;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                border: 1px solid var(--Music-Controls-Color);
+                opacity: 0.7;
+                z-index: -1;
+            }
+            
+            .playy i {
+                margin-left: 1px;
+                font-size: calc(var(--Music-Controls-Size) - 4px);
+                color: var(--Music-Controls-Color);
+                cursor: pointer;
+            }
+            
+            .prev svg,
+            .next svg {
+                width: var(--Music-Controls-Size);
+                height: var(--Music-Controls-Size);
+                color: var(--Music-Controls-Color);
+                stroke-width: 1.5;
+                cursor: pointer;
+            }
+            
+            .tittle-music {
+                text-align: center;
+            }
+            
+            .music-name {
+                font-size: 10px;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <div id="topbar">
+            <div class="navigation">
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="carousel__nav">
+
+                    <!--- Mini Muse picture/navigation for the first muse starts here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-1"><img src="assets/profileAvatar/lala.gif">
+                                <div class="text">About Me</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-2"><img src="assets/profileAvatar/touka.gif"></a>
+                            <div class="text">Touka</div>
+                        </div>
+                    </div>
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <img src="assets/profileAvatar/raicita.gif">
+                            <div class="text">Raicita(†)</div>
+                        </div>
+                    </div>
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <img src="assets/profileAvatar/anaBanana.gif">
+                            <div class="text">Ana(†)</div>
+                        </div>
+                    </div>
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-3"><img src="assets/profileAvatar/nya.gif"></a>
+                            <div class="text">Nya</div>
+                        </div>
+                    </div>
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-4"><img src="assets/profileAvatar/dazai.gif"></a>
+                            <div class="text">Dazai</div>
+                        </div>
+                    </div>
+
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-5"><img src="assets/profileAvatar/shanks.gif"></a>
+                            <div class="text">Shanks</div>
+                        </div>
+                    </div>
+
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-6"><img src="assets/profileAvatar/cherish.gif"></a>
+                            <div class="text">Cherish</div>
+                        </div>
+                    </div>
+                    <!--- Mini Muse picture/navigation for the first muse ends here --->
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-7"><img src="assets/profileAvatar/sinner.gif"></a>
+                            <div class="text">Shirou</div>
+                        </div>
+                    </div>
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a href="#muse-8"><img src="assets/profileAvatar/hoshi.gif"></a>
+                            <div class="text">Hoshi</div>
+                        </div>
+                    </div>
+                    <!-- <div class="minimuse">
+                        <div class="textcon">
+                            <a><img src="assets/profileAvatar/sinner.gif"></a>
+                            <div class="text">Shirou</div>
+                        </div>
+                    </div> -->
+                    <!-- #muse-4
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a><img src="assets/profileAvatar/sinner.gif"></a>
+                            <div class="text">Shirou</div>
+                        </div>
+                    </div>
+                    <div class="minimuse">
+                        <div class="textcon">
+                            <a><img src="assets/profileAvatar/sinner.gif"></a>
+                            <div class="text">Shirou</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!--END SIDEBAR & CAROUSEL_NAV-->
+
+
+
+            <!----------------- MUSE PAGES START HERE ----------------->
+
+            <div class="slides">
+
+
+
+                <!---------- SLIDER FOR MUSE 1 START ---------->
+
+                <!---------- SLIDER FOR MUSE 1 END ---------->
+
+                <!---------- SLIDER FOR MUSE 1 START ---------->
+                <div class="slides-item" id="muse-1">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://flic.kr/ps/3UxWPC" title="Xat bg samples" target="_blank"><span class="lnr lnr-picture"></span></a>
+                        <a href="https://xat.com/orgtx" title="Find me" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                        <!-- <a href="https://open.spotify.com/playlist/2Qah48uFkyOAvZdPA33AA9?si=132cb01682d24396" title="Playlist"><span class="lnr lnr-music-note"></span></a> -->
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/juvia.png">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Username</td>
+                                        <td>Lala</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Discord</td>
+                                        <td>lalaucha</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Hobbies</td>
+                                        <td>Get High on a saturday night <br> play fortnite <br> Watch orc and dwarf porn</td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td style="width: 35%;">Steam</td>
+                                        <td>Lazy Lit to Novella</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Epic</td>
+                                        <td>Eastern</td>
+                                    </tr> -->
+                                    <tr>
+                                        <td style="width: 35%;">Music</td>
+                                        <td>
+                                            <div class="mcontrols">
+                                                <div class="flex">
+                                                    <a class="prev" id="prev">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-skip-back"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                                                    </a>
+
+                                                    <a class="playbutt">
+                                                        <div class="playy" style="display: block;">
+                                                            <div class="fen"><i id="play" class="fas fa-play"></i></div>
+                                                        </div>
+
+                                                        <div class="pausee" style="display: none;">
+                                                            <div class="fen"><i class="dripicons dripicons-media-pause"></i></div>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="next" id="next">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-skip-forward"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                                                    </a>
+                                                </div>
+                                                <div class="tittle-music">
+                                                    <div class="artist-name"></div>
+                                                    <div class="music-name"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </tr>
+                            </table>
+                        </div>
+
+
+
+                        <div class="skills">
+                            <h6>Alcoholic</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>Shitposter</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Schizophrenic</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="biography">
+                            <h1>ShatteredDoll</h1>
+                            <b> The roots of Vanquishers tree:</b><br> Hypnotized, and with no words, I just move my head and stare into your eyes <br> Too hard, too strong, too much <br> <br> Dig a hole with your own hands and find The roots of your
+                            despair and then burn the fucking tree. <br> <br> You said "i love, i love you too" <br>You said "it will be forever". <br> <br> I've planted the seed i let it grow <br> I watch how the birds are nesting <br> I've dug a hole
+                            and you were there <br>Corrupting my tree forever
+                            <br><br>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!---------- SLIDER FOR MUSE 2 START ---------->
+                <div class="slides-item" id="muse-2">
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/imissright" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/touka.jpg">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <tbody>
+                                    <!-- <tr>
+                                        <td style="width: 35%;">Username</td>
+                                        <td>ImissRight</td>
+                                    </tr> -->
+                                    <!-- 
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Heterosexual</td>
+                                    </tr> -->
+                                    <!-- <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Sophie Turner</td>
+                                    </tr> -->
+                                </tbody>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 
+                        <div class="skills">
+                            <h6>Strangth</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 30%">.</div>
+                            </div>
+                            <h6>Dextarity</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 80%">.</div>
+                            </div>
+                            <h6>Constitution</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 40%">.</div>
+                            </div>
+                            <h6>Wisdom</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 65%">.</div>
+                            </div>
+                            <h6>Intelligence</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 90%">.</div>
+                            </div>
+                            <h6>Charisma</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 50%">.</div>
+                            </div>
+                        </div> -->
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1>Touka</h1>
+                            Eres una gran amiga, una de las mejores en realidad, a pesar de que hay ciertas cosas que no estoy de acuerdo contigo, pero sabes que cada paso o acción que tomes siempre te apoyaré y lo sabes. Te quiero mucho bb, sigue mirando adelante y no dejes que
+                            nada te desanime ❤
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 2 END ---------->
+
+
+                <!---------- SLIDER FOR MUSE 3 START ---------->
+                <div class="slides-item" id="muse-3">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/nya" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/nya.png">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <tbody>
+                                    <!-- <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Astrid Hall</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>They/Them- NB</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>19-25</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">ethnicity</td>
+                                        <td>American mutt</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td>DJ or Military (Depends)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Pansexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Ruby Rose</td>
+                                    </tr> -->
+                                </tbody>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="skills">
+                            <!-- <h6>Driving Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Video Game Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 20%">.</div>
+                            </div>
+                            <h6>DJ Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 60%">.</div>
+                            </div>
+                            <h6>People Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 50%">.</div>
+                            </div>
+                            <h6>Flirty Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 90%">.</div>
+                            </div>
+                            <h6>Academic Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div> -->
+                        </div>
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1>Nya</h1>
+                            Mi hermosa lala, sabes que ultimamente nos hemos acercado mucho y no sabes lo feliz que eso me hace sentir. sos una persona agradable, divertida, con unas ocurrencias que nunca se me cruzarian por la mente, y eso es lo que te hace única. Sé que con el
+                            tiempo te vas a volver muy valiosa para mí, por que te voy tomando un cariño fuerte día con día, jamás cambies esa locura que te identifica. Te quiero mucho...
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 3 END ---------->
+
+                <!---------- SLIDER FOR MUSE 4 START ---------->
+                <div class="slides-item" id="muse-4">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/Dazai" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/dazai.jpg">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <!-- <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Adrianna Alvera</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>She/Her</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>20s - 40s</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">ethnicity</td>
+                                        <td>Scicilian American</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td>Gunrunner - Mafia Don</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Bisexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Charlize Theron</td>
+                                    </tr>
+                                </tbody> -->
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="skills">
+                            <!-- <h6>People Tolorance</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 50%">.</div>
+                            </div>
+                            <h6>Bullshit Tolorance</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 20%">.</div>
+                            </div>
+                            <h6>Weapon Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 90%">.</div>
+                            </div>
+                            <h6>Language Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 80%">.</div>
+                            </div>
+                            <h6>Buisness Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Police Activity</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div> -->
+                        </div>
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1>Dazai</h1>
+                            Bueno aca dejando mi pequeña firma, ya mucho tiempo que te conozco espero que todo nice entre nosotros y un sabio consejo para los demas, no sean enemigos de lala no les conviene :'v, no se como te conoci pero creo que fue por un man que ahora lo super
+                            quemaste jaja, pero en fin espero que nos sigamos llevando bien asi como hasta ahora.
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 4 END ---------->
+
+                <!---------- SLIDER FOR MUSE 5 START ---------->
+                <div class="slides-item" id="muse-5">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/ShanksAkagamii" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/akagamiishanks.jpg">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <!-- <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Delilah Jacobson</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>She/Her</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>20s-Late 30s</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">ethnicity</td>
+                                        <td>Irish American</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td>Outlaw</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Heterosexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Evan Rachel Wood</td>
+                                    </tr>
+                                </tbody> -->
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- <div class="skills">
+                            <h6>Sharpshooting</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>Education</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 90%">.</div>
+                            </div>
+                            <h6>Manual Labor</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 30%">.</div>
+                            </div>
+                            <h6>People Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 20%">.</div>
+                            </div>
+                            <h6>Riding</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 90%">.</div>
+                            </div>
+                            <h6>Wanted Level</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                        </div> -->
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1>ShanksAkagamii</h1>
+                            Lalita! Cele! ♥ Aunque no es gran cosa lo que diré acá me encanta y me halaga formar parte de este espacio. Linda amiga, amo tu manera de ser y como ya te lo dije: siempre te recuerdo por lo que has dejado huella en mí. Esas frases xD Eres una chica genial,
+                            100pre the best. ♥
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 5 END ---------->
+
+                <!---------- SLIDER FOR MUSE 6 START ---------->
+                <div class="slides-item" id="muse-6">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/iCherish" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/cherish.png">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <!-- <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Estella Calhoun</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>She/Her</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>20 - 30</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">race</td>
+                                        <td>Human</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td>Scientist/Lone Wanderer</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Androsexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Leslie Harrington</td>
+                                    </tr>
+                                </tbody> -->
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- <div class="skills">
+                            <h6>Strength</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 50%">.</div>
+                            </div>
+                            <h6>Perception & Agility</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 60%">.</div>
+                            </div>
+                            <h6>Endurance</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>Charisma</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 40%">.</div>
+                            </div>
+                            <h6>Intelligence</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Luck</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 30%">.</div>
+
+
+
+
+                            </div>
+                        </div> -->
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1> Cherish</h1>
+                            Dear Lalita, muchas gracias por diversas cosas: por dejarme ser parte de esto, por brindarme tu amistad, porque siempre me haces reír y por jugar fortnite conmigo aunque no acierto un solo tiro. Desde la primera vez que comenzamos a interactuar me pareció
+                            que eras una persona muy única y divertida, siempre es bonito conocer a personas auténticas <br> ૮₍ ᵔ 𖥦 ᵔ ₎ა. Te deseo todo lo mejor y espero que podamos seguir siendo amiwis por mucho tiempo, tqm
+                            mi gran ídola, Lala ♡.
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 6 END ---------->
+
+                <!---------- SLIDER FOR MUSE 7 START ---------->
+                <div class="slides-item" id="muse-7">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/introspeccion" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/nimu.jpg">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <!-- <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Lillian Maxson</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>She/Her</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>25-35</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">ethnicity</td>
+                                        <td>American</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td>Lab Tech (Biotechnologist)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Dimisexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Alycia Debnam-Carey</td>
+                                    </tr>
+                                </tbody> -->
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- <div class="skills">
+                            <h6>Lab Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Driving</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 60%">.</div>
+                            </div>
+                            <h6>Outdoors Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>People Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 40%">.</div>
+                            </div>
+                            <h6>Flirty Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 50%">.</div>
+                            </div>
+                            <h6>Academic Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                        </div> -->
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1>Shirou</h1>
+                            Tkm lala siempre funada nunca infunada.Sos una nueve, no dejes que nadie te diga lo contrario
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 7 END ---------->
+
+                <!---------- SLIDER FOR MUSE 8 START ---------->
+                <div class="slides-item" id="muse-8">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://xat.me/winterized" title="Profile page" target="_blank"><span class="lnr lnr-rocket"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="assets/pageImage/hoshi.jpg">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <!-- <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Nicoli Armani</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>He/Him</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>19-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">ethnicity</td>
+                                        <td>American Italian</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td>Enforcer/Family Monster</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Heterosexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Nicolas Holt</td>
+                                    </tr>
+                                </tbody> -->
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- <div class="skills">
+                            <h6>Driving Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Marksmens Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 80%">.</div>
+                            </div>
+                            <h6>People Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 60%">.</div>
+                            </div>
+                            <h6>Pain Tolorance</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>Bullshit Tolorance</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 20%">.</div>
+                            </div>
+                            <h6>Mental Health</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 10%">.</div>
+                            </div>
+                        </div> -->
+
+                        <div class="biography" style="margin-top: 164px;">
+                            <h1>Hoshi</h1>
+                            Que tal Juvia-chan paso a dejar mi firma bien fotolog pa que no me olvides oki? me agrada que me entiendas el rollo pa andar de drogadictos asi que se agradece, te dejo un osito ʕ•ᴥ•ʔ
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 8 END ---------->
+                <!---------- SLIDER FOR MUSE 9 START ---------->
+                <div class="slides-item" id="muse-9">
+                    <!--Make sure the ID equals the href in the minimuse sidebar-->
+
+                    <!--bubbles div starts here-->
+                    <div class="bubbles">
+                        <a href="https://open.spotify.com/track/0Khb23AVnUDnbF0QYQVMwO?si=bf076ddfb7a444a7" title="Theme"><span class="lnr lnr-music-note"></span></a>
+                        <a href="/" title="visuals"><span class="lnr lnr-user"></span></a>
+                        <a href="/" title="starters"><span class="lnr lnr-pencil"></span></a>
+                    </div>
+                    <!--bubbles div end here. you can delete the bubbles div completely if you don't want links -->
+
+                    <img src="https://64.media.tumblr.com/88c467d593d101cb5113867d70c2cc6c/7118a37653df650c-0e/s400x600/c0be59fa34d81341540528b79650d98e9fc36af1.jpg">
+
+                    <div class="details">
+
+                        <div class="intro">
+                            <table class="intro">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 35%;">Full Name</td>
+                                        <td>Patricia Anderson</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">pronouns</td>
+                                        <td>She/Her</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Age</td>
+                                        <td>18-30</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">Nickname</td>
+                                        <td>Pegs,Peggy</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">occupation</td>
+                                        <td> Depends on Age </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">sexuality</td>
+                                        <td>Heterosexual</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 35%;">faceclaim</td>
+                                        <td>Mary Elizabeth Winstead</td>
+                                    </tr>
+                                </tbody>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="skills">
+                            <h6>Mechanic Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>Marksmens Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 60%">.</div>
+                            </div>
+                            <h6>People Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 60%">.</div>
+                            </div>
+                            <h6>Loyality</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 70%">.</div>
+                            </div>
+                            <h6>Academic Skills</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 100%">.</div>
+                            </div>
+                            <h6>Pain Tolorance</h6>
+                            <div class="progress">
+                                <div class="percent" style="width: 50%">.</div>
+                            </div>
+                        </div>
+
+                        <div class="biography">
+                            <h1>biography</h1>
+                            <br> Childhood; Grew up in the southside, Peggy's father was a man that did everything for his daughter. His wife left him when Peg's was rather little. She developed a car obsession when she was around 9ish and her father
+                            was more then happy to help her discover the vehicles because he was a independent mechanic out of their garage. <br><br> At the Age 13 her father had an accident, He was really hurt and soon lost the movement in the hips down.
+                            They slipped into a hard spot. They were going to lose their home and garage. Only one's that kept her going were the serpents. They kept her from going into the system made sure that they kept their home. The serpents pulled
+                            through for her. She has been loyal since. <br><br> Teen Years; Peggy spent much of her teen years amongst the serpents. She still kept her grades up because she swore to her father. She wouldn't end up like him. He didn't
+                            know he became the serpent's mechanic and was keeping the bikes in good order. They paid her well and her father didn't know.<br><br> When he found out the Serpents were who were keeping them afloat. He got into a Fight with
+                            FP and kicked her out. She kept her grades up despite couch surfing. She kept with the Serpents even though her father disapproved once again the Serpents picking her up.
+                            <br><br> Young Adult; Upon graduation, she learned her father's head wasn't the greatest despite all the bullshit she came through for her father. She managed to get into a local collage. She studied hard and became a Paralegal
+                            for Paul Sowerberry.<br><br> She managed to help her father and he got a girlfriend that took over his care. She then moved after she got into law school.<br><br> Adult Hood; She moved back to Riverdale and became the Lawyer
+                            in town she is now enjoying her life.<br>
+
+                            <h2>personality</h2><br> Leader; Peggy doesn't hesitate to do what she believes is right. Bold and bright she will open her mouth against those who will doubt. She will stand up for the underdog. She has a natural habit to contain
+                            her inner thoughts but her opinion will be voiced no matter who wants to hear it. Extremely loyal and will do anything for her family (Serpents). Though it has put her in one of two hard spots. It might be considered obsessive
+                            in some subject's especially cars. <br><br> Extraverted or Introverted; Depends on the people. She loves to spend time with her friends. She also loves being with her father and his crowd. But outside of that she would rather
+                            be home with her cat with a glass of wine and a good book.<br>
+
+                            <h1>Character Log</h1>
+                            Position: Switch, Primary Submissive<br> Roleplay Genre: Modern, Collage, Highschool, Riverdale OC, Angst, Romance,<br> Play's With: Romantic interest in Cis Men, Friends with anyone that clicks. <br>
+
+                            <b>Starter</b>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!---------- SLIDER FOR MUSE 9 END ---------->
+
+            </div>
+            <!--END SLIDES-->
+        </div>
+        <!-- END CONTAINER-->
+        <script src="script.js"></script>
+    </body>
+
+    </html>
+    <!-- partial -->
+
+</body>
+
+</html>

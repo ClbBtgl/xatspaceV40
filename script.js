@@ -5,7 +5,6 @@ $(document).ready(function() {
         musicName = $(".music-name"),
         time = $(".time"),
         fillBar = $(".fillBar");
-
     let audioData = [];
 
     var song = new Audio();

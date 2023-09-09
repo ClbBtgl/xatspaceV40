@@ -13,9 +13,9 @@ $(document).ready(function() {
 
     function load() {
         audioData = [{
-                name: "ROVT",
-                artist: "Made to be broken",
-                src: "assets/rovt.mp3?raw=true"
+                name: "White Rabbit",
+                artist: "Jefferson Airplane",
+                src: "assets/white-rabit.mp3?raw=true"
             },
             {
                 name: "Mary on a cross",
@@ -23,9 +23,9 @@ $(document).ready(function() {
                 src: "assets/MaryOnACross.mp3?raw=true"
             },
             {
-                name: "Downfall",
-                artist: "Trust Company",
-                src: "assets/downfall.mp3?raw=true"
+                name: "Architects",
+                artist: "Doomsday",
+                src: "assets/cut.mp3?raw=true"
             },
         ];
 

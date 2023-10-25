@@ -13,6 +13,12 @@ $(document).ready(function() {
 
     function load() {
         audioData = [{
+                name: "DArkSide",
+                artist: "Bmth",
+                src: "assets/darskide.mp3?raw=true"
+            },
+
+            {
                 name: "White Rabbit",
                 artist: "Jefferson Airplane",
                 src: "assets/white-rabit.mp3?raw=true"
@@ -22,11 +28,7 @@ $(document).ready(function() {
                 artist: "Ghost",
                 src: "assets/MaryOnACross.mp3?raw=true"
             },
-            {
-                name: "Architects",
-                artist: "Doomsday",
-                src: "assets/cut.mp3?raw=true"
-            },
+
         ];
 
         artistname.html(audioData[CurrentSong].artist);
